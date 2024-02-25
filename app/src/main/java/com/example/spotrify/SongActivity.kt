@@ -30,6 +30,7 @@ class SongActivity : AppCompatActivity() {
         binding.artistName.text = song.artist
 
         binding.backButton.setOnClickListener {
+            mediaPlayer.release()
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
